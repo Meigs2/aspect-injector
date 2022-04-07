@@ -71,7 +71,7 @@ namespace AspectInjector.Tests.Interfaces
         public void Interfaces_InjectEventAddProxy()
         {
             Checker.Passed = false;
-            _testClass.TestEvent += (s, e) => { };
+            _testClass.TestEvent += OnTestClassOnTestEvent;
             Assert.True(Checker.Passed);
         }
 
@@ -79,8 +79,12 @@ namespace AspectInjector.Tests.Interfaces
         public void Interfaces_InjectEventRemoveProxy()
         {
             Checker.Passed = false;
-            _testClass.TestEvent -= (s, e) => { };
+            _testClass.TestEvent -= OnTestClassOnTestEvent;
             Assert.True(Checker.Passed);
+        }
+
+        void OnTestClassOnTestEvent(object s, EventArgs e)
+        {
         }
 
         [GeneralTests_Trigger]
@@ -135,8 +139,8 @@ namespace AspectInjector.Tests.Interfaces
 
             public event EventHandler<System.EventArgs> TestEvent
             {
-                add { Checker.Passed = true; }
-                remove { Checker.Passed = true; }
+                add => Checker.Passed = true;
+                remove => Checker.Passed = true;
             }
 
             public int TestProperty

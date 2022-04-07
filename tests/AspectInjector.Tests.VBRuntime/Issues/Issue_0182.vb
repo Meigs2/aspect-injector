@@ -2,7 +2,7 @@ Imports AspectInjector.Broker
 Imports AspectInjector.Tests.Assets
 Imports Xunit
 
-Namespace AspectInjector.Tests.VBRuntime
+Namespace Issues
 
     Public Class Issue_0182
 

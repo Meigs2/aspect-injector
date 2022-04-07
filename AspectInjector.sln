@@ -64,7 +64,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectInjector.Tests.Generi
 		{FC862191-9081-4A58-96FF-B57F17AC40A9} = {FC862191-9081-4A58-96FF-B57F17AC40A9}
 	EndProjectSection
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AspectInjector.Tests.VBRuntime", "tests\AspectInjector.Tests.VBRuntime\AspectInjector.Tests.VBRuntime.vbproj", "{1C5CC61E-3080-42D8-BEE0-6113C8C57D5D}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "AspectInjector.Tests.VBRuntime", "tests\AspectInjector.Tests.VBRuntime\AspectInjector.Tests.VBRuntime.vbproj", "{1C5CC61E-3080-42D8-BEE0-6113C8C57D5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

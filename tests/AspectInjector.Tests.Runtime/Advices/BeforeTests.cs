@@ -39,7 +39,7 @@ namespace AspectInjector.Tests.Advices
         {
             Checker.Passed = false;
 
-            _beforeTestClass.TestEvent += (s, e) => { };
+            _beforeTestClass.TestEvent += OnBeforeTestClassOnTestEvent;
             Assert.True(Checker.Passed);
         }
 
@@ -48,8 +48,12 @@ namespace AspectInjector.Tests.Advices
         {
             Checker.Passed = false;
 
-            _beforeTestClass.TestEvent += (s, e) => { };
+            _beforeTestClass.TestEvent -= OnBeforeTestClassOnTestEvent;
             Assert.True(Checker.Passed);
+        }
+
+        void OnBeforeTestClassOnTestEvent(object s, EventArgs e)
+        {
         }
 
         [Fact]
