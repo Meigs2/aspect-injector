@@ -6,7 +6,7 @@ Namespace Issues
     Public Class Issue_0098
         <Fact>
         Public Sub Fixed()
-            Dim temp = New Target().Variable = New Object()
+            Dim temp = New Target().Variable
         End Sub
 
         <Aspect(Scope.PerInstance)>
